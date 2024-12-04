@@ -122,7 +122,7 @@ if uploaded_file:
     st.write("\n\n\n")
     if st.button("Analyze Voice"):
         with st.spinner("Analyzing..."):
-            # Now send the file to the /predict-deepfake/ endpoint to get the prediction
+            # Now send the file to the /predict-deepfake/ endpoint to get the prediction  
             predict_response = requests.post(predict_url, files=files)
             if predict_response.status_code == 200:
                 prediction = predict_response.json().get("prediction")
